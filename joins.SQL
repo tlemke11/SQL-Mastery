@@ -18,9 +18,15 @@ SELECT * FROM users uu
 
 
 -- Left Join
--- Selects everything from the table on the LEFT + all of the matching items from the table on the RIGHT were the Join Condition is Met - http://www.sql-join.com/sql-join-types
+-- Selects everything from the table on the LEFT of join + all of the matching items from the table on the RIGHT
+-- were the Join Condition is Met - http://www.sql-join.com/sql-join-types
 
 SELECT * FROM users uu
  LEFT JOIN records rr ON (uu.user = rr.userID) AND (rr.description IS NOT NULL);
 
+-- Left Join
+-- Selects everything from the table on the RIGHT of join + all of the matching items from the table on the Left
+-- were the Join Condition is Met - http://www.sql-join.com/sql-join-types
 
+SELECT * FROM users uu
+ RIGHT JOIN records rr ON (uu.user = rr.userID) AND (uu.first_name IS NOT NULL);
